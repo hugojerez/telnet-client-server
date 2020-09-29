@@ -22,7 +22,7 @@ async function run() {
       throw new Error(error)
   }
  
-  setInterval(() => {
+  setInterval(async () => {
     
     let res = await connection.send('data').catch(a=>console.error(a))
     console.log('async result:', res)
