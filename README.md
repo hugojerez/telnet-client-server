@@ -18,10 +18,22 @@ Install telnet server
 
 Run docker
 
-    docker run -p 23:23 -d servertelnet 
+    docker run --network host  -p 23:23 -d servertelnet 
     docker run  -d --network host clientetelnet 
 
-# STEP 4 (Optional)
+# STEP 4 : Intall Wireshark 
+
+    docker run \
+    --name=wireshark \
+    --network=host \
+    --cap-add=NET_ADMIN \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e TZ=Europe/London \
+    -p 3000:3000 \
+    linuxserver/wireshark
+
+# STEP 5 (Optional)
 
 Create a dummy docker just for fun  
 
