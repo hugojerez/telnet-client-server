@@ -25,7 +25,7 @@ async function run() {
   setInterval(async () => {
     
     let res = await connection.send('data').catch(a=>console.error(a))
-    console.log('async result:', res)
+    console.log('Testing result... 🙊 :', res)
   },1000)
 }
  

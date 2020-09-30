@@ -18,7 +18,7 @@ Install telnet server
 
 Run docker
 
-    docker run -p 23:23 -d --network host servertelnet 
+    docker run -p 23:23 -d servertelnet 
     docker run  -d --network host clientetelnet 
 
 # STEP 4 (Optional)
