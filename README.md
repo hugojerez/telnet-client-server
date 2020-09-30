@@ -25,4 +25,4 @@ Run docker
 
 Create a dummy docker just for fun  
 
-    docker run -dit ubuntu
+    docker run --network host -dit ubuntu
