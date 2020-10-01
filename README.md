@@ -1,3 +1,7 @@
+# Video (In spanish)
+
+    https://www.youtube.com/embed/AXkPJoVW7UM
+
 # STEP 1
 
 Install telnet client 
