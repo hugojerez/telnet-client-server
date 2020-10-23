@@ -2,9 +2,9 @@
 
 def function(packet):
   # Se obtiene el argumento packet
-  if packet["IP"]["srcport"] == "23"
+  if packet["IP"]["srcport"] == "23":
     packet["IP"]["srcport"]  = "25"
-  else
+  else:
     print("Paquete ignorado")
   # If the condition is meet
   return packet
