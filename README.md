@@ -1,5 +1,10 @@
-# Video (In spanish)
+# Video in action
 
+[![Polymorph](https://img.youtube.com/vi/AMVPcL8OY0E/1.jpg)](https://youtu.be/AMVPcL8OY0E)
+
+
+# Video (In spanish)
+    
     https://www.youtube.com/embed/AXkPJoVW7UM
 
 # STEP 1
