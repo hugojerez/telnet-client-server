@@ -7,11 +7,13 @@
 #
 # DESCRIPCIÓN
 # Deja el intervalo del paquete inválido (anulado)
+# Esta invalidación se logra anulando el paquete
+# dandole un ancho igual a cero
 #
 
 def function(packet):
   if packet["IP"]["proto"] == 6:
-    return None
+    packet["TCP"]["len"]  = "0x0"
   else:
     return packet 
 

@@ -10,9 +10,15 @@
 # convierte por “POLY”
 #
 def function(packet):
-  # Se obtiene el argumento packet
-  if packet["TELNET"]["data"] == "data\n":
-    packet["TCP"]["payload"] = str("POLY").encode("UTF-8")
-  # If the condition is meet
-  return packet
+  try:
+    # Se obtiene el argumento packet
+      if packet["IP"]["proto"] == 6:
+        if packet["TELNET"]["data"] == "data\n":
+          # If the condition is meet
+          packet["TCP"]["payload"] = str("POLY").encode("UTF-8")
+        return packet
+      else:
+        return packet
+  except:
+    return packet
 
