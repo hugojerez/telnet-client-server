@@ -11,3 +11,23 @@
 ## Método Pasivo en tiempo real
 
    [Ver archivo Python](https://github.com/hugojerez/telnet-client-server/blob/master/tarea4/pcap/function.py)
+
+### Tshark 
+
+    tshark -r r00005.pcap -T fields -e ip.len > r00005len.dat
+    tshark -r r00005.pcap -T fields -e frame.time_epoch  > r00005time.dat
+
+### Matlab
+
+
+    data = load('r00005len.dat') 
+    timeT = load('r00005time.dat')
+    timeTB = timeT - timeT(1)
+    plot(timeTB,data)
+
+### Matlab output
+
+![Gráfica](https://i.imgur.com/VHBhK9r.jpg)
+
+
+_El Eje horizontal corresponde al tiempo en milisegundos (ms), el eje vertical corresponde a la cantidad de datos (%) transmitidos_
