@@ -53,7 +53,7 @@ Se esperaba recibir un error de TimeOut cortando el túnel de Telnet
 
 ### ¿Qué se obtuvo?  (Resultados)
 
-A pesar de haber peticiones con un delay gigantezco de aproximadamente 1 minuto, el protocolo Telnet lograba controlar la situación acumulando mucha data en cada paquete, y generando patrones de re-transmisión, pero esta acumulación no le juega en contra si el tráfico se mantiene constantemente con un delay
+A pesar de haber peticiones con un delay gigantezco de aproximadamente 1 minuto, el protocolo Telnet lograba controlar la situación acumulando mucha data en cada paquete, y generando patrones de re-transmisión, pero esta acumulación le juega en contra si el tráfico se mantiene constantemente con un delay, causando un cuello de botella hasta detener la conexión
 
 ### Búsqueda de un valor crítico
 
