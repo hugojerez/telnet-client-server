@@ -25,7 +25,7 @@
 
     sudo tc qdisc add  dev lo root netem delay 10ms reorder 25% 50%
 
-### Tshark 
+### Tshark (Archivo generado de métrica) 
 
     tshark -r r00002.pcap -T fields -e ip.len > r00002len.dat
     tshark -r r00002.pcap -T fields -e frame.time_epoch  > r00002time.dat
@@ -51,4 +51,9 @@ Se esperaba que Telnet entre en algún tipo de bucle al perder la lógica y orde
 
 ### ¿Qué se obtuvo?  (Resultados)
 
-A pesar de alterar el orden de los paquetes, Telnet mostró cierta estabilidad en la transmisión de paquetes, asegurando su llegada, pero advirtiendo mediante un paquete con la información "spurious retransmission"
+A pesar de alterar el orden de los paquetes, Telnet mostró una constante inestabilidad en la transmisión de paquetes, advirtiendo mediante un paquete con la información "spurious retransmission"
+
+
+### Búsqueda de un valor crítico
+
+Se ha determinado que todo reordenamiento sobre el 25% afecta la transmisión de datos

@@ -25,7 +25,7 @@
 
     sudo tc qdisc add dev lo root netem loss 5%
 
-### Tshark 
+### Tshark (Archivo generado de métrica) 
 
     tshark -r r00003.pcap -T fields -e ip.len > r00003len.dat
     tshark -r r00003.pcap -T fields -e frame.time_epoch  > r00003time.dat
@@ -51,4 +51,9 @@ Se esperaba que se vuelvan a retransmitir los paquetes perdidos
 
 ### ¿Qué se obtuvo?  (Resultados)
 
-Se cumplió el resultado esperado, se re-acumulaba la información dentro del siguiente paquete
+Se cumplió el resultado esperado, se re-acumulaba la información dentro del siguiente paquete, hasta que ocurrió un error relacionado con el ACK del paquete
+
+
+### Búsqueda de un valor crítico
+
+Se ha determinado que toda pérdida sobre el 5.00% afecta la transmisión rompiendo el túnel de conexión

@@ -26,7 +26,7 @@
     sudo tc qdisc add dev lo root netem corrupt 5%
 
 
-### Tshark 
+### Tshark (Archivo generado de métrica) 
 
     tshark -r r00004.pcap -T fields -e ip.len > r00004len.dat
     tshark -r r00004.pcap -T fields -e frame.time_epoch  > r00004time.dat
@@ -53,3 +53,7 @@ Se esperaba que los datos se dañaran y se volvieran a retransmitir
 ### ¿Qué se obtuvo?  (Resultados)
 
 Cada vez se fue volviendo más lenta la retransmisión hasta que apareció un error finalizando toda la transmisión indicando que habían paquetes duplicados
+
+### Búsqueda de un valor crítico
+
+Se ha determinado que toda corrupción sobre el 5% afecta la transmisión rompiendo el túnel de conexión

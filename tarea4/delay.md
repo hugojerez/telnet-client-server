@@ -26,7 +26,7 @@
 
     sudo tc qdisc add dev lo root netem delay 60000ms 6000ms 25%
 
-### Tshark 
+### Tshark (Archivo generado de métrica) 
 
     tshark -r r00001.pcap -T fields -e ip.len > r00001len.dat
     tshark -r r00001.pcap -T fields -e frame.time_epoch  > r00001time.dat
@@ -53,4 +53,8 @@ Se esperaba recibir un error de TimeOut cortando el túnel de Telnet
 
 ### ¿Qué se obtuvo?  (Resultados)
 
-A pesar de haber peticiones con un delay gigantezco de aproximadamente 1 minuto, el protocolo Telnet lograba controlar la situación acumulando mucha data en cada paquete, y generando patrones de re-transmisión 
+A pesar de haber peticiones con un delay gigantezco de aproximadamente 1 minuto, el protocolo Telnet lograba controlar la situación acumulando mucha data en cada paquete, y generando patrones de re-transmisión, pero esta acumulación no le juega en contra si el tráfico se mantiene constantemente con un delay
+
+### Búsqueda de un valor crítico
+
+Se ha determinado que todo valor sobre 6 segundos causará un aumento exponencial de datos acumulados
