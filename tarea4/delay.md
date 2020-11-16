@@ -16,6 +16,7 @@
 |Atributo|Descripción|
 |--|--|
 |Método|Delay|
+|Autores|Hugo Jerez - Alejandro Álvarez |
 |Función|Hace que el retardo adicional sea de 60000 ms ± 6000 ms con el siguiente elemento aleatorio dependiendo del 25% en el último.|
 |Protocolo|Telnet|
 |Pcap|00001.pcap (véase en el repositorio)|

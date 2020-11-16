@@ -15,6 +15,7 @@
 |Atributo|Descripción|
 |--|--|
 |Método|Reorder|
+|Autores|Hugo Jerez - Alejandro Álvarez |
 |Función|Esto hace que cada 5 (o 10, 15, 20, ...) el paquete se envíe inmediatamente y cada dos el paquete se retrasa 10 ms. .|
 |Protocolo|Telnet|
 |Pcap|00002.pcap (véase en el repositorio)|

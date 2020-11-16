@@ -15,6 +15,7 @@
 |Atributo|Descripción|
 |--|--|
 |Método|Packet Loss|
+|Autores|Hugo Jerez - Alejandro Álvarez |
 |Función|Este comando hace que se pierda el 5% de los paquetes.|
 |Protocolo|Telnet|
 |Pcap|00003.pcap (véase en el repositorio)|

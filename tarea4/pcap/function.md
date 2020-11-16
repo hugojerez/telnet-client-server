@@ -8,4 +8,6 @@
 - [PCAP](https://github.com/hugojerez/telnet-client-server/blob/master/tarea4/pcap/)
 - [Función Pasivo en tiempo real](https://github.com/hugojerez/telnet-client-server/blob/master/tarea4/pcap/function.md)
 
+## Método Pasivo en tiempo real
 
+   [Ver archivo Python](https://github.com/hugojerez/telnet-client-server/blob/master/tarea4/pcap/function.py)
